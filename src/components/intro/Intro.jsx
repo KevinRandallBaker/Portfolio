@@ -6,7 +6,13 @@ export default function Intro() {
   const textRef = useRef();
 
   useEffect(() => {
-    console.log("foo");
+    init(textRef.current, {
+      showCursor: false,
+      backDelay: 1500,
+      backSpeed: 60,
+      showCursor: true,
+      strings: ["Developer", "Designer", "Content Creator"],
+    });
   }, []);
 
   return (
@@ -21,7 +27,7 @@ export default function Intro() {
           <h2>Hi There, I'm</h2>
           <h1>Kevin Baker</h1>
           <h3>
-            Freelance <span>Designer</span>
+            Freelance <span ref={textRef}></span>
           </h3>
         </div>
         <a href="#portfolio">
