@@ -13,7 +13,7 @@ export default function intro() {
           <h2>Hi There, I'm</h2>
           <h1>Kevin Baker</h1>
           <h3>
-            Freelance<span></span>{" "}
+            Freelance<span>Designer</span>
           </h3>
         </div>
         <a href="#portfolio">
