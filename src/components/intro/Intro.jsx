@@ -1,9 +1,14 @@
 import "./intro.scss";
 import { init } from "ityped";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-export default function intro() {
-  useEffect(() => {}, []);
+export default function Intro() {
+  const textRef = useRef();
+
+  useEffect(() => {
+    console.log("foo");
+  }, []);
+
   return (
     <div className="intro" id="intro">
       <div className="left">
