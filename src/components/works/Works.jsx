@@ -16,7 +16,9 @@ export default function Works() {
                 <span>Projects</span>
               </div>
             </div>
-            <div className="right"></div>
+            <div className="right">
+              <img src="" alt="" />
+            </div>
           </div>
         </div>
       </div>
