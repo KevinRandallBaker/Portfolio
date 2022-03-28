@@ -32,27 +32,20 @@ export default function Testimonials() {
     <div className="testimonials" id="testimonials">
       <h1>Testimonials</h1>
       <div className="container">
-        <div className="card">
-          <div className="top">
-            <img src="assets/right-arrow.png" className="left" alt="" />
-            <img
-              className="user"
-              src="https://www.buffalorising.com/wp-content/uploads/2021/04/Tech-Hub-Photo-6-scaled.jpg"
-              alt=""
-            />
-            <img className="right" src="assets/youtube.png" alt="" />
+        {data.map((d) => (
+          <div className={d.featured ? "card featured" : "card"}>
+            <div className="top">
+              <img src="assets/right-arrow.png" className="left" alt="" />
+              <img className="user" src={d.img} alt="" />
+              <img className="right" src={d.icon} alt="" />
+            </div>
+            <div className="center">{d.desc}</div>
+            <div className="bottom">
+              <h3>{d.name}</h3>
+              <h4>{d.title}</h4>
+            </div>
           </div>
-          <div className="center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-            sapiente in vitae possimus impedit obcaecati, libero praesentium
-            asperiores sint placeat perferendis neque quod accusantium, delectus
-            quasi dolores reiciendis aut repellat?
-          </div>
-          <div className="bottom">
-            <h3>Kevin</h3>
-            <h4>TDP of M&T</h4>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
